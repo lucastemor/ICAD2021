@@ -38,7 +38,7 @@
 
 button{
   margin: auto;
-  display: block;
+  /*display: block;*/
 }
 
 button:hover{
