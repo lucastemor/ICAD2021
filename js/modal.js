@@ -11,6 +11,8 @@ var modal_btn_multi = document.getElementsByClassName("myBtn_multi");
 // Get the <span> element that closes the modal
 var span_close_multi = document.getElementsByClassName("close_multi");
 
+//var iframes = document.getElementsByClassName("yt");
+
 // When the user clicks the button, open the modal
 function setDataIndex() {
 
@@ -35,6 +37,13 @@ for (i = 0; i < modal_btn_multi.length; i++)
     span_close_multi[i].onclick = function() {
         var ElementIndex = this.getAttribute('data-index');
         modalparent[ElementIndex].style.display = "none";
+        //window.location.reload();
+        /*
+        for (j=0; j<iframes.length; j++)
+            {
+                iframes[j].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+            }
+        */    
     };
 
 }
